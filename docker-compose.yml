@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  counter:
+    image: "counter:1.2"
+    depends_on:
+      - redis
+    ports:
+      - "8080:8080"
+  redis:
+    image: "redis:alpine"
